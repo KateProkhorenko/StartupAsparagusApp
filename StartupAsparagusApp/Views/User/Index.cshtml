@@ -1,0 +1,26 @@
+﻿@model IEnumerable<User>
+
+<h4 class="bg-primary text-white text-center p-2">Lenta Asparagus lovers</h4>
+
+<table class="table table-sm table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>DateEating</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Comment</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (User u in Model)
+        {
+            <tr>
+                <td>@u.DateEating</td>
+                <td>@u.Name</td>
+                <td>@u.Email</td>
+                <td>@u.Comment</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-primary" asp-action="SubmitAsparagus">Back</a>

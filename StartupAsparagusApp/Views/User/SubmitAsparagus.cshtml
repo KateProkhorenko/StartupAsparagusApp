@@ -1,0 +1,33 @@
+﻿@model User
+
+<h5 class="bg-primary text-white text-center p-2">SubmitAsparagus</h5>
+
+<form asp-action="SubmitAsparagus" method="post">
+    <div class="form-group">
+        <label asp-for="Id"></label>
+        <input class="form-control" asp-for="Id" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="UserId"></label>
+        <input class="form-control" asp-for="UserId" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <div>
+        <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <input class="form-control" asp-for="Name" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <div>
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <input class="form-control" asp-for="Email" />
+    </div>
+
+    <button class="btn btn-primary mt-2" type="submit">I have eaten asparagus</button>
+
+    <a class="btn btn-primary mt-2" asp-action="Index">Back</a>
+</form>
+
